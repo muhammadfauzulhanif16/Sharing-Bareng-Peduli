@@ -2,13 +2,17 @@ import {
   Box,
   chakra,
   Container,
+  Link,
+  SimpleGrid,
   Stack,
   Text,
-  useColorModeValue,
   VisuallyHidden,
+  Flex,
+  useColorModeValue,
+  Center,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Logo = (props: any) => {
   return (
@@ -62,35 +66,77 @@ const SocialButton = ({
   );
 };
 
+const ListHeader = ({ children }: { children: ReactNode }) => {
+  return (
+    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+      {children}
+    </Text>
+  );
+};
+
 export const Footer = () => {
   return (
-    <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
-      <Container
-        as={Stack}
-        maxW={"6xl"}
-        py={4}
-        direction={{ base: "column", md: "row" }}
-        spacing={4}
-        justify={{ base: "center", md: "space-between" }}
-        align={{ base: "center", md: "center" }}
+    <>
+      <Box
+        bg={useColorModeValue("gray.50", "gray.900")}
+        color={useColorModeValue("gray.700", "gray.200")}
       >
-        <Logo />
-        <Text>© 2020 Chakra Templates. All rights reserved</Text>
-        <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={"YouTube"} href={"#"}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={"Instagram"} href={"#"}>
-            <FaInstagram />
-          </SocialButton>
-        </Stack>
-      </Container>
-    </Box>
+        <Container as={Stack} maxW={"6xl"} py={10}>
+          <SimpleGrid
+            templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
+            spacing={8}
+          >
+            <Flex grow={1}>
+              <Stack spacing={6}>
+                <Box>
+                  <Logo color={useColorModeValue("gray.700", "white")} />
+                </Box>
+                <Text fontSize={"sm"}>
+                  © 2020 Chakra Templates. All rights reserved
+                </Text>
+                <Stack direction={"row"} spacing={6}>
+                  <SocialButton label={"Twitter"} href={"#"}>
+                    <FaTwitter />
+                  </SocialButton>
+                  <SocialButton label={"YouTube"} href={"#"}>
+                    <FaYoutube />
+                  </SocialButton>
+                  <SocialButton label={"Instagram"} href={"#"}>
+                    <FaInstagram />
+                  </SocialButton>
+                </Stack>
+              </Stack>
+            </Flex>
+            <Flex grow={1}>
+              <Stack align={"flex-start"}>
+                <ListHeader>Company</ListHeader>
+                <Link href={"#"}>About us</Link>
+                <Link href={"#"}>Blog</Link>
+                <Link href={"#"}>Contact us</Link>
+                <Link href={"#"}>Pricing</Link>
+                <Link href={"#"}>Testimonials</Link>
+              </Stack>
+            </Flex>
+            <Flex grow={1}>
+              <Stack align={"flex-start"}>
+                <ListHeader>Support</ListHeader>
+                <Link href={"#"}>Help Center</Link>
+                <Link href={"#"}>Terms of Service</Link>
+                <Link href={"#"}>Legal</Link>
+                <Link href={"#"}>Privacy Policy</Link>
+                <Link href={"#"}>Satus</Link>
+              </Stack>
+            </Flex>
+          </SimpleGrid>
+        </Container>
+      </Box>
+
+      <Center p={4}>
+        <p>
+          © 2021 ShaBar (<i>Sharing</i> Bareng) Community by Muhammad Fauzul
+          Hanif. All rights reserved.
+        </p>
+      </Center>
+    </>
   );
 };
