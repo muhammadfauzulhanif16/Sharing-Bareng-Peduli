@@ -21,7 +21,7 @@ export const About = () => {
     {
       name: "Misi",
       content:
-        "Menjadi komunitas pecinta sedekah yang bermanfaat dan bergerak atas prinsip kepedulian sosial dengan membantu meringankan kebutuhan masyarakat",
+        "Menjalankan Gerakan Juma'at Berkah (GJB). Meningkatkan partisipasi untuk kegiatan amal dan sosial. Meringankan beban masyarakat yang mengalami bencana.",
     },
   ];
 
