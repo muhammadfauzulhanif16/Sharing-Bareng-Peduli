@@ -1,18 +1,26 @@
 import * as React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { NavBar } from "./components/NavBar";
-import { Caraousel } from "./components/Carousel";
-import { About } from "./components/About";
-import { Member } from "./components/Member";
-import { CTA } from "./components/CTA";
-import { Footer } from "./components/Footer";
+import {
+  About,
+  Carousel,
+  CTA,
+  Footer,
+  Member,
+  NavBar,
+  Program,
+} from "./components";
+import { Payment } from "./components/Payment";
+import { Address } from "./components/Address";
 
 export const App = () => (
   <ChakraProvider>
     <NavBar />
-    <Caraousel />
+    <Carousel />
     <About />
+    <Program />
     <Member />
+    <Payment />
+    <Address />
     <CTA />
     <Footer />
   </ChakraProvider>
