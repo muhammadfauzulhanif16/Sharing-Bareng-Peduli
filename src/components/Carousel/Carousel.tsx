@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Text, Box, Flex, Image, HStack, Stack } from "@chakra-ui/react";
-import { SlideList } from "./SlideList";
+import { CarouselList } from "./CarouselList";
 
 export const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
-    slidesCount = SlideList.length,
+    slidesCount = CarouselList.length,
     setSlide = (slide: React.SetStateAction<number>) => {
       setCurrentSlide(slide);
     },
@@ -31,7 +31,7 @@ export const Carousel = () => {
   return (
     <Flex w="full" pos="relative" overflow="hidden" borderRadius="xl">
       <Flex h="30rem" w="full" {...carouselStyle}>
-        {SlideList.map((slide, sid) => (
+        {CarouselList.map((slide, sid) => (
           <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
             <Image
               src={slide.img}
