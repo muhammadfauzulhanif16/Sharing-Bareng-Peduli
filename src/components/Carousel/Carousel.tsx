@@ -26,7 +26,7 @@ export const Carousel = () => {
       ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
     }, SLIDES_INTERVAL_TIME);
     return () => clearInterval(automatedSlide);
-  }, []);
+  });
 
   return (
     <Flex w="full" pos="relative" overflow="hidden" borderRadius="xl">

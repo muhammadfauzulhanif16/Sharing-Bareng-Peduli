@@ -36,7 +36,7 @@ export const Member = () => {
       ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
     }, SLIDES_INTERVAL_TIME);
     return () => clearInterval(automatedSlide);
-  }, []);
+  });
 
   return (
     <Box p={4}>
