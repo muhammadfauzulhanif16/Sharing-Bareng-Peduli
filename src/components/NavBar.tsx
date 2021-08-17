@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
-import ShaBar from "../assets/icon/LogoSmall.png";
+import ShaBar from "../img/logo/ShaBarLogo.png";
 
 export const NavBar = () => {
   const bg = useColorModeValue("white", "gray.800"),
@@ -31,11 +31,11 @@ export const NavBar = () => {
   return (
     <Box
       bg={bg}
-      as="header"
-      p="4"
-      shadow="xl"
-      position="sticky"
-      top="0"
+      as={"header"}
+      p={4}
+      shadow={"xl"}
+      pos={"sticky"}
+      top={0}
       zIndex={1}
     >
       <Flex justifyContent="space-between">
@@ -56,7 +56,7 @@ export const NavBar = () => {
           </Center>
         </Box>
 
-        <Flex align="center" spacing={1}>
+        <Flex align="center">
           <HStack
             spacing={1}
             mr={1}
@@ -72,7 +72,7 @@ export const NavBar = () => {
             })}
           </HStack>
 
-          <ColorModeSwitcher justifySelf="flex-end" />
+          <ColorModeSwitcher ml={4} />
 
           <Box display={{ base: "inline-flex", md: "none" }}>
             <IconButton
@@ -99,7 +99,7 @@ export const NavBar = () => {
               m={2}
               spacing={3}
               rounded="sm"
-              zIndex={999}
+              zIndex={2}
             >
               <CloseButton
                 aria-label="Close menu"
