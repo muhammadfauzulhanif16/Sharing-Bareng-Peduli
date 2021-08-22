@@ -44,6 +44,18 @@ export const MemberList = [
     quote: "",
   },
   {
+    name: "Ririn",
+    img: ``,
+    role: "",
+    quote: "",
+  },
+  {
+    name: "Annisa Maghfira",
+    img: ``,
+    role: "",
+    quote: "",
+  },
+  {
     name: "Muhammad Raihan Firdaus",
     img: ``,
     role: "Social Media Designer",
@@ -53,6 +65,12 @@ export const MemberList = [
     name: "Fandhy Ardhana Saputra",
     img: `${FAS}`,
     role: "Visuals & Video Editor",
+    quote: "",
+  },
+  {
+    name: "Muhammad Taufikurrian",
+    img: ``,
+    role: "",
     quote: "",
   },
   {
