@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Image,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { HeroList } from "./HeroList";
 
 export const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0),
+  const bg = useColorModeValue("gray.50", "gray.900"),
+    [currentSlide, setCurrentSlide] = useState(0),
     slidesCount = HeroList.length,
     setSlide = (slide: React.SetStateAction<number>) => {
       setCurrentSlide(slide);
@@ -29,7 +38,7 @@ export const Hero = () => {
   });
 
   return (
-    <Box as="section" px={["1rem", "2rem", "3rem"]} id="">
+    <Box as="section" px={["1rem", "2rem", "3rem"]} id="" bg={bg}>
       <Flex w="full" pos="relative" overflow="hidden" rounded="1rem">
         <Flex h="80vh" w="full" {...carouselStyle}>
           {HeroList.map((slide, sid) => (
