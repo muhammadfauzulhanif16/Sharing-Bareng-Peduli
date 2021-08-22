@@ -10,12 +10,11 @@ export const About = () => {
           <Text align="center">Tentang Komunitas?</Text>
         </Heading>
         <Text color="gray.600" align="center">
-          Shabar Community merupakan sebuah komunitas yang dibentuk oleh Shabar
-          Community merupakan sebuah komunitas yang dibentuk oleh kelompok anak
-          muda yang memiliki rasa empati serupa terhadap keadaan masyarakat
-          sekitar yang lebih membutuhkan. Shabar community juga dibangun dengan
-          tujuan untuk selalu berusaha menebar manfaat dan kebaikan dalam
-          kehidupan sosial di masyarakat.
+          Shabar Community merupakan sebuah komunitas yang dibentuk oleh
+          kelompok anak muda yang memiliki rasa empati serupa terhadap keadaan
+          masyarakat sekitar yang lebih membutuhkan. Shabar community juga
+          dibangun dengan tujuan untuk selalu berusaha menebar manfaat dan
+          kebaikan dalam kehidupan sosial di masyarakat.
           <br />
           <br />
           Dengan hadirnya Shabar community kami berharap keluarga, sahabat,
