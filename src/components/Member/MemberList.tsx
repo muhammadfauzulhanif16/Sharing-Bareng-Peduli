@@ -1,55 +1,64 @@
-import AMB from "../../img/member/AhnafMushyafaBisri.jpg";
-import DR from "../../img/member/DiajengRetnowati.jpg";
-import FAS from "../../img/member/FandhyArdhanaSaputra.jpg";
-import KK from "../../img/member/KhusnulKhotimah.jpg";
-import MFH from "../../img/member/MuhammadFauzulHanif.jpg";
-import NN from "../../img/member/NanaSuryana.jpg";
-import NSPP from "../../img/member/NilaSariPuspitaPutri.jpg";
+import AMB from "../../images/member/AhnafMushyafaBisri.jpg";
+import DR from "../../images/member/DiajengRetnowati.jpg";
+import FAS from "../../images/member/FandhyArdhanaSaputra.jpg";
+import KK from "../../images/member/KhusnulKhotimah.jpg";
+import MFH from "../../images/member/MuhammadFauzulHanif.jpg";
+import NS from "../../images/member/NanaSuryana.jpg";
+import NSPP from "../../images/member/NilaSariPuspitaPutri.jpg";
 
 export const MemberList = [
   {
     name: "Nana Suryana",
-    img: `${NN}`,
-    occupation: "Founder",
+    img: `${NS}`,
+    role: "Founder & Chairman",
+    quote: "",
   },
   {
     name: "Ahnaf Mushyafa Bisri",
     img: `${AMB}`,
-    occupation: "Co-Founder & Financial Manager",
+    role: "Vice Chairman & Financial Manager",
+    quote: "",
   },
   {
     name: "Nila Sari Puspita Putri",
     img: `${NSPP}`,
-    occupation: "Financial Manager",
+    role: "Financial Manager",
+    quote: "",
   },
   {
     name: "Diajeng Retnowati",
     img: `${DR}`,
-    occupation: "Public Relations",
+    role: "Public Relations",
+    quote: "",
   },
   {
     name: "Khusnul Khotimah",
     img: `${KK}`,
-    occupation: "Public Relations",
+    role: "Public Relations",
+    quote: "",
   },
   {
     name: "Faridah Septiani",
     img: ``,
-    occupation: "Content Writer",
+    role: "Content Writer",
+    quote: "",
   },
   {
     name: "Muhammad Raihan Firdaus",
     img: ``,
-    occupation: "Social Media Designer",
+    role: "Social Media Designer",
+    quote: "",
   },
   {
     name: "Fandhy Ardhana Saputra",
     img: `${FAS}`,
-    occupation: "Visuals & Video Editor",
+    role: "Visuals & Video Editor",
+    quote: "",
   },
   {
     name: "Muhammad Fauzul Hanif",
     img: `${MFH}`,
-    occupation: "Web Developer",
+    role: "IT Support & Web Developer",
+    quote: "Certainly can because used to it.",
   },
 ];
