@@ -1,7 +1,9 @@
 export { About } from "./About";
-export { Carousel } from "./Carousel/Carousel";
+export { Address } from "./Address";
+export { Hero } from "./Hero";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
-export { Member } from "./Member/Member";
+export { Member } from "./Member";
 export { NavBar } from "./NavBar";
 export { Program } from "./Program";
+export { Payment } from "./Payment";
