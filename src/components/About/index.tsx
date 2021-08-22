@@ -1,10 +1,25 @@
-import { Box, Heading, SimpleGrid, Flex, Text, VStack } from "@chakra-ui/react";
-
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  Flex,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { AboutList } from "./AboutList";
 
 export const About = () => {
+  const bg = useColorModeValue("gray.50", "gray.900");
+
   return (
-    <Box as="section" id="about" px={["1rem", "2rem", "3rem"]} pt="5rem">
+    <Box
+      as="section"
+      bg={bg}
+      id="about"
+      px={["1rem", "2rem", "3rem"]}
+      pt="5rem"
+    >
       <Flex direction="column">
         <Heading mb="1rem" fontSize={"3xl"}>
           <Text align="center">Tentang Komunitas?</Text>
