@@ -2,12 +2,12 @@ import {
   Box,
   Container,
   Heading,
-  Stack,
-  SimpleGrid,
   Image,
+  SimpleGrid,
+  Stack,
 } from "@chakra-ui/react";
-import ShaBarStore from "../img/program/ShaBarStore.png";
-import ShaBarPeduli from "../img/program/ShaBarPeduli.png";
+import ShaBarPeduli from "../../images/program/ShaBarPeduli.png";
+import ShaBarStore from "../../images/program/ShaBarStore.png";
 
 export const Program = () => {
   const programs = [
@@ -15,7 +15,7 @@ export const Program = () => {
     { name: "ShaBar Store", img: `${ShaBarPeduli}` },
   ];
   return (
-    <Box p={4}>
+    <Box p={10}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={"3xl"}>Program Kami</Heading>
       </Stack>
