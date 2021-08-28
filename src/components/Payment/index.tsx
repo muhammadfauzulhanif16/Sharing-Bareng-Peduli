@@ -1,40 +1,41 @@
-import { Box, Container, Grid, Heading, Image, Stack } from "@chakra-ui/react";
-
-import ATMBersama from "../../images/payment/ATMBersama.png";
-import BCA from "../../images/payment/BCA.png";
-import BNI from "../../images/payment/BNI.png";
-import Dana from "../../images/payment/Dana.png";
-import Gopay from "../../images/payment/Gopay.png";
-import LinkAja from "../../images/payment/LinkAja.png";
-import Ovo from "../../images/payment/Ovo.png";
+import React from "react";
+import {
+  Box,
+  SimpleGrid,
+  Heading,
+  Text,
+  Center,
+  Image,
+} from "@chakra-ui/react";
+import { PaymentList as payment } from "./PaymentList";
 
 export const Payment = () => {
-  const payments = [
-    { name: "ATM Bersama", img: `${ATMBersama}` },
-    { name: "BCA", img: `${BCA}` },
-    { name: "BNI", img: `${BNI}` },
-    { name: "Dana", img: `${Dana}` },
-    { name: "Gopay", img: `${Gopay}` },
-    { name: "LinkAja", img: `${LinkAja}` },
-    { name: "Ovo", img: `${Ovo}` },
-  ];
   return (
-    <Box p={10}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={"3xl"}>Mitra Pembayaran</Heading>
-      </Stack>
+    <Box py={12} px={8} align="center">
+      <Text fontSize="xl" fontWeight="500" color="green.500" mb={4}>
+        MITRA PEMBAYARAN DONASI
+      </Text>
 
-      <Grid templateColumns="repeat(7, 1fr)" gap={6}>
-        {payments.map((payment) => {
+      <Heading size="lg" mb={4}>
+        Lorem ipsum dolor.
+      </Heading>
+
+      <Text mx={48} mb={8} color="gray.500">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+        consequatur dolorum eaque quia sed veritatis? Aut, eaque ut. Nam nihil
+        quod voluptate. Accusamus asperiores est id molestias perferendis
+        sapiente, ut.
+      </Text>
+
+      <SimpleGrid columns={[1, 7]}>
+        {payment.map(({ name, img }) => {
           return (
-            <Image
-              alt={`${payment.name}'s icon`}
-              src={payment.img}
-              title={payment.name}
-            />
+            <Center>
+              <Image alt={`${name}'s icon`} src={img} title={name} w="7rem" />
+            </Center>
           );
         })}
-      </Grid>
+      </SimpleGrid>
     </Box>
   );
 };

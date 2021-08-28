@@ -10,13 +10,13 @@ export const MemberList = [
   {
     name: "Nana Suryana",
     img: `${NS}`,
-    role: "Founder & Chairman",
+    role: "Founder, Chairman",
     quote: "",
   },
   {
     name: "Ahnaf Mushyafa Bisri",
     img: `${AMB}`,
-    role: "Vice Chairman & Financial Manager",
+    role: "Vice Chairman, Financial Manager",
     quote: "",
   },
   {
@@ -76,7 +76,7 @@ export const MemberList = [
   {
     name: "Muhammad Fauzul Hanif",
     img: `${MFH}`,
-    role: "IT Support & Web Developer",
+    role: "IT Support, Web Developer",
     quote: "Certainly can because used to it.",
   },
 ];

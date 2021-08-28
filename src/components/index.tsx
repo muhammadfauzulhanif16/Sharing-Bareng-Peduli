@@ -1,9 +1,9 @@
 export { About } from "./About";
-export { Address } from "./Address";
+export { Contact } from "./Contact";
 export { Hero } from "./Hero";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
 export { Member } from "./Member";
-export { NavBar } from "./NavBar";
+export { Header } from "./Header";
 export { Program } from "./Program";
 export { Payment } from "./Payment";

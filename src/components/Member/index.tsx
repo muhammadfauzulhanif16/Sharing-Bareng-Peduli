@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Avatar, Box, Flex, Heading, HStack, Text } from "@chakra-ui/react";
-import { MemberList } from "./MemberList";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  HStack,
+  Avatar,
+  VStack,
+} from "@chakra-ui/react";
+import { MemberList as member } from "./MemberList";
 
 export const Member = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
-    slidesCount = MemberList.length,
+    slidesCount = member.length,
     setSlide = (slide: React.SetStateAction<number>) => {
       setCurrentSlide(slide);
     },
@@ -15,10 +23,10 @@ export const Member = () => {
       setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
     },
     carouselStyle = {
-      transition: "all .7s",
+      transition: "all .5s",
       ml: `-${currentSlide * 100}%`,
     },
-    SLIDES_INTERVAL_TIME = 5000,
+    SLIDES_INTERVAL_TIME = 3000,
     ANIMATION_DIRECTION = "right";
 
   useEffect(() => {
@@ -29,85 +37,51 @@ export const Member = () => {
   });
 
   return (
-    <Box as="section" id="member" pt="5rem">
-      <Heading mb="3rem" fontSize={"3xl"}>
-        <Text align="center">Anggota</Text>
+    <Box py={12} px={8} align="center">
+      <Text fontSize="xl" fontWeight="500" color="green.500" mb={4}>
+        ANGGOTA
+      </Text>
+
+      <Heading size="lg" mb={4}>
+        Lorem ipsum dolor.
       </Heading>
 
+      <Text mx={48} mb={8} color="gray.500">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+        consequatur dolorum eaque quia sed veritatis? Aut, eaque ut. Nam nihil
+        quod voluptate. Accusamus asperiores est id molestias perferendis
+        sapiente, ut.
+      </Text>
+
       <Flex w="full" pos="relative" overflow="hidden">
-        <Flex h={["32rem", "30rem", "25rem"]} w="full" {...carouselStyle}>
-          {MemberList.map(({ img, quote, name, role }, sid) => (
+        <Flex h="23rem" w="full" {...carouselStyle}>
+          {member.map(({ name, img, role }, sid) => (
             <Box key={`slide-${sid}`} boxSize="full" flex="none">
-              {quote !== "" ? (
-                <Flex
+              <Box
+                mb={8}
+                bgColor="gray.100"
+                p={8}
+                w="25rem"
+                borderRadius={16}
+                shadow="xl"
+              >
+                <Avatar
                   shadow="xl"
-                  direction={{ base: "column-reverse", md: "row" }}
-                  mx="auto"
-                  w={["90%", "90%", "80%", "50%"]}
-                  rounded="1rem"
-                  zIndex={1}
-                  p="3rem"
-                  justify="space-between"
-                  pos="relative"
-                >
-                  <Flex
-                    direction="column"
-                    textAlign="left"
-                    justify="space-between"
-                  >
-                    <Heading fontSize={["xl", "2xl", "3xl"]} pb="2rem">
-                      <Text align={{ base: "center", md: "start" }}>
-                        "{quote}"
-                      </Text>
-                    </Heading>
-                    <Text
-                      fontWeight="bold"
-                      align={{ base: "center", md: "start" }}
-                    >
-                      {name}
-                      <Text fontWeight="medium" color="gray.500">
-                        {role}
-                      </Text>
-                    </Text>
-                  </Flex>
-                  <Avatar
-                    src={img}
-                    height="10rem"
-                    width="10rem"
-                    alignSelf="center"
-                    m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
-                  />
-                </Flex>
-              ) : (
-                <Flex
-                  shadow="xl"
-                  direction="column"
-                  mx={"auto"}
-                  rounded="1rem"
-                  w={["90%", "20rem"]}
-                  zIndex={1}
-                  p="3rem"
-                  border="1rem"
-                  justify="center"
-                  align="center"
-                  pos="relative"
-                >
-                  <Avatar
-                    src={img}
-                    height="10rem"
-                    width="10rem"
-                    mb="2rem"
-                    // alignSelf="center"
-                    // m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
-                  />
-                  <Text fontWeight="bold" align="center">
-                    {name}
-                    <Text fontWeight="medium" color="gray.500">
-                      {role}
-                    </Text>
+                  src={img}
+                  w="10rem"
+                  h="10rem"
+                  name={name}
+                  title={name}
+                  alt={`${name}'s photo`}
+                  mb={8}
+                />
+                <VStack lineHeight={1}>
+                  <Text fontWeight="500">{name}</Text>
+                  <Text color="green.500" fontWeight="500">
+                    {role}
                   </Text>
-                </Flex>
-              )}
+                </VStack>
+              </Box>
             </Box>
           ))}
         </Flex>
@@ -118,12 +92,12 @@ export const Member = () => {
               key={`dots-${slide}`}
               cursor="pointer"
               boxSize="1rem"
-              m="0 2px"
-              bg={currentSlide === slide ? "blackAlpha.800" : "blackAlpha.500"}
+              m="0 .25rem"
+              bg={currentSlide === slide ? "green.500" : "blackAlpha.500"}
               rounded="50%"
               display="inline-block"
               transition="background-color 0.6s ease"
-              _hover={{ bg: "blackAlpha.800" }}
+              _hover={{ bg: "green.500" }}
               onClick={() => setSlide(slide)}
             />
           ))}

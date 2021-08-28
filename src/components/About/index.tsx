@@ -1,54 +1,77 @@
 import {
   Box,
-  Heading,
-  SimpleGrid,
   Flex,
+  Heading,
   Text,
+  HStack,
   VStack,
-  useColorModeValue,
+  Icon,
 } from "@chakra-ui/react";
-import { AboutList } from "./AboutList";
+import { BiCheckDouble } from "react-icons/all";
+import { MissionList as mission } from "./MissionList";
 
 export const About = () => {
-  const bg = useColorModeValue("gray.50", "gray.900");
-
   return (
-    <Box
-      as="section"
-      bg={bg}
-      id="about"
-      px={["1rem", "2rem", "3rem"]}
-      pt="5rem"
-    >
-      <Flex direction="column">
-        <Heading mb="1rem" fontSize={"3xl"}>
-          <Text align="center">Tentang Komunitas?</Text>
-        </Heading>
-        <Text color="gray.600" align="center">
-          Shabar Community merupakan sebuah komunitas yang dibentuk oleh
-          kelompok anak muda yang memiliki rasa empati serupa terhadap keadaan
-          masyarakat sekitar yang lebih membutuhkan. Shabar community juga
-          dibangun dengan tujuan untuk selalu berusaha menebar manfaat dan
-          kebaikan dalam kehidupan sosial di masyarakat.
-          <br />
-          <br />
-          Dengan hadirnya Shabar community kami berharap keluarga, sahabat,
-          teman dan masyarakat pada umumnya bisa ikut serta dalam melakukan
-          kebaikan, kami berharap dapat berkontribusi dan menjadi salah satu
-          wadah untuk membantu meringankan beban masyarakat yang kurang mampu.
-        </Text>
-      </Flex>
+    <Box px={8} py={12} align="center">
+      <Text fontSize="xl" fontWeight="500" color="green.500">
+        TENTANG KOMUNITAS
+      </Text>
 
-      <SimpleGrid columns={[1, 2]} spacing="1rem">
-        {AboutList.map((about) => (
+      <Heading size="lg" my={4}>
+        “Berbagi Bersama Menebar Kebaikan”
+      </Heading>
+
+      <Text mx={48} mb={8} color="gray.500">
+        Komunitas yang disusun oleh kelompok anak muda yang memiliki empati
+        dengan tujuan untuk selalu berusaha menebar kebaikan dalam kehidupan
+        sosial di masyarakat.
+        <br />
+        <br />
+        Kami berharap masyarakat ikut serta melakukan kebaikan untuk membantu
+        meringankan masyarakat yang kurang mampu.
+      </Text>
+
+      <Flex mx={16}>
+        <Box w="full" align="start" fontWeight="500" fontSize="lg">
+          <Text>Visi</Text>
+
+          <HStack align="center" mt={4}>
+            <Box color="gray.50" mr={4}>
+              <Icon
+                as={BiCheckDouble}
+                boxSize={8}
+                bgColor="green.500"
+                rounded={4}
+              />
+            </Box>
+
+            <Text fontWeight={600}>
+              Menjadi komunitas yang bermanfaat atas prinsip kepedulian sosial
+            </Text>
+          </HStack>
+        </Box>
+
+        <Box w="full" align="start" fontWeight="500" fontSize="lg">
+          <Text>Misi</Text>
+
           <VStack align="start">
-            <Heading mt="1rem" fontSize={"xl"}>
-              {about.name}
-            </Heading>
-            <Text color="gray.600">{about.content}</Text>
+            {mission.map(({ title }) => (
+              <HStack align="center" mt={4}>
+                <Box color="gray.50" mr={4}>
+                  <Icon
+                    as={BiCheckDouble}
+                    boxSize={8}
+                    bgColor="green.500"
+                    rounded={4}
+                  />
+                </Box>
+
+                <Text fontWeight={600}>{title}</Text>
+              </HStack>
+            ))}
           </VStack>
-        ))}
-      </SimpleGrid>
+        </Box>
+      </Flex>
     </Box>
   );
 };

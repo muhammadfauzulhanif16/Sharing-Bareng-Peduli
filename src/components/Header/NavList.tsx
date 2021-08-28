@@ -1,0 +1,1 @@
+export const NavList = [{ name: "Home", to: "/" }];
