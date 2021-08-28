@@ -1,3 +1,3 @@
-# ShaBar (<i>Sharing</i> Bareng) Community
+# Sharing Bareng Peduli
  
-> Berbagi Bersama Menebar Manfaat dan Kebaikan
+> "Berbagi Bersama Menebar Kebaikan"
