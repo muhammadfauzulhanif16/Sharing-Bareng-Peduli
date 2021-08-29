@@ -27,7 +27,7 @@ export const Hero = () => {
         <Flex justify={["center", "center", "center", "start"]} w="full" mt={4}>
           <Button
             size="lg"
-            colorScheme="green"
+            bgColor="green.500"
             mt={4}
             color="gray.50"
             shadow="xl"
@@ -41,7 +41,7 @@ export const Hero = () => {
             size="lg"
             mt={4}
             ml="1.5rem"
-            colorScheme="green"
+            bgColor="green.500"
             variant="outline"
             _focus={{ shadow: "none" }}
           >

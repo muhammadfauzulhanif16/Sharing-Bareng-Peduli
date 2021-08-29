@@ -7,6 +7,7 @@ import {
   HStack,
   Avatar,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { MemberList as member } from "./MemberList";
 
@@ -27,7 +28,8 @@ export const Member = () => {
       ml: `-${currentSlide * 100}%`,
     },
     SLIDES_INTERVAL_TIME = 3000,
-    ANIMATION_DIRECTION = "right";
+    ANIMATION_DIRECTION = "right",
+    theme = useColorModeValue("gray.100", "gray.700");
 
   useEffect(() => {
     const automatedSlide = setInterval(() => {
@@ -64,7 +66,7 @@ export const Member = () => {
             <Box key={`slide-${sid}`} boxSize="full" flex="none">
               <Box
                 mb={8}
-                bgColor="gray.100"
+                bgColor={theme}
                 p={8}
                 w={["80%", "25rem"]}
                 borderRadius={16}

@@ -19,18 +19,21 @@ import SBPLogo from "../../images/logo/ShaBarLogo.png";
 import { Link } from "react-router-dom";
 import { NavList as nav } from "./NavList";
 import { BiDonateHeart, AiOutlineMenu } from "react-icons/all";
+import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 
 export const Header = () => {
-  const mobileNav = useDisclosure();
+  const mobileNav = useDisclosure(),
+    t1 = useColorModeValue("gray.50", "gray.800"),
+    t2 = useColorModeValue("gray.100", "gray.700");
 
   return (
     <Box
       pos="sticky"
       top="0"
       zIndex={1}
-      bgColor="gray.50"
+      bgColor={t1}
       borderBottomRadius={16}
-      shadow="sm"
+      shadow="md"
     >
       <Box mx={[2, 4, 8]} py={4}>
         <Flex align="center" justify="space-between">
@@ -52,11 +55,11 @@ export const Header = () => {
                         mx=".5rem"
                         fontWeight="500"
                         _hover={{
-                          backgroundColor: "gray.100",
+                          backgroundColor: t2,
                           borderRadius: "6px",
-                          color: "green.500",
+                          color: "green.400",
                         }}
-                        _selected={{ color: "green.500" }}
+                        _selected={{ color: "green.400" }}
                         _focus={{ shadow: "none" }}
                       >
                         {name}
@@ -68,23 +71,26 @@ export const Header = () => {
             </Tabs>
           </HStack>
 
-          <Button
-            display={{ base: "none", lg: "inline-flex" }}
-            colorScheme="green"
-            shadow="xl"
-            color="gray.50"
-            _focus={{ shadow: "none" }}
-            rightIcon={<BiDonateHeart />}
-          >
-            Donate
-          </Button>
+          <HStack d={{ base: "none", lg: "inline-flex" }}>
+            <Button
+              bgColor="green.500"
+              shadow="xl"
+              color="gray.50"
+              _focus={{ border: "none" }}
+              rightIcon={<BiDonateHeart />}
+            >
+              Donate
+            </Button>
+
+            <ColorModeSwitcher _focus={{ border: "none" }} />
+          </HStack>
 
           <Box display={{ base: "inline-flex", lg: "none" }}>
             <IconButton
               display={{ base: "flex", lg: "none" }}
               aria-label="Open menu"
               fontSize="20px"
-              color={useColorModeValue("gray.800", "inherit")}
+              color={useColorModeValue("gray.800", "gray.50")}
               variant="ghost"
               icon={<AiOutlineMenu />}
               onClick={mobileNav.onOpen}
@@ -92,8 +98,8 @@ export const Header = () => {
 
             <VStack
               borderWidth="1px"
-              borderColor="gray.100"
-              bgColor="gray.50"
+              borderColor={t2}
+              bgColor={t1}
               pos="absolute"
               top={0}
               left={0}
@@ -104,15 +110,28 @@ export const Header = () => {
               rounded={16}
               shadow="xl"
             >
-              <CloseButton
-                aria-label="Close menu"
-                onClick={mobileNav.onClose}
-              />
+              <HStack justify="space-between" w="full">
+                <Link to="/">
+                  <HStack>
+                    <Img src={`${SBPLogo}`} boxSize={12} />
+                    <Heading size="md">ShaBar Peduli</Heading>
+                  </HStack>
+                </Link>
+
+                <HStack>
+                  <ColorModeSwitcher _focus={{ border: "none" }} />
+
+                  <CloseButton
+                    aria-label="Close menu"
+                    onClick={mobileNav.onClose}
+                  />
+                </HStack>
+              </HStack>
 
               <Button
-                colorScheme="green"
+                bgColor="green.500"
                 w="full"
-                _focus={{ shadow: "none" }}
+                _focus={{ border: "none" }}
                 rightIcon={<BiDonateHeart />}
               >
                 Donate

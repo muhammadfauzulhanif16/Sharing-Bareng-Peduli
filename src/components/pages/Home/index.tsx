@@ -11,10 +11,10 @@ import { CTA } from "../../CTA";
 import { Footer } from "../../Footer";
 
 export const Home = () => {
-  const bg = useColorModeValue("gray.50", "gray.800");
+  const theme = useColorModeValue("gray.50", "gray.800");
 
   return (
-    <Box bg={bg} userSelect="none">
+    <Box bg={theme} userSelect="none">
       <Header />
       <Hero />
       <About />
