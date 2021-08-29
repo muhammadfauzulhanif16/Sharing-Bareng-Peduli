@@ -19,9 +19,10 @@ export const ScrollTop = () => {
       left={0}
       onClick={scrollTop}
       cursor="pointer"
+      shadow="2xl"
       _hover={{ bgColor: "green.400" }}
     >
-      <Icon as={ArrowUpIcon} w={6} h={6} />
+      <Icon as={ArrowUpIcon} w={6} h={6} color="gray.50" />
     </Center>
   );
 };

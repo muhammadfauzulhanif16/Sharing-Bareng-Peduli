@@ -15,7 +15,7 @@ export const CTA = () => {
       <Button
         size="lg"
         color="green.500"
-        shadow="xl"
+        shadow="2xl"
         rightIcon={<BiDonateHeart />}
         _focus={{ shadow: "none" }}
       >

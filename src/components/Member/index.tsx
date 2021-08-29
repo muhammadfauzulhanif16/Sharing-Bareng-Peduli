@@ -70,10 +70,10 @@ export const Member = () => {
                 p={8}
                 w={["80%", "25rem"]}
                 borderRadius={16}
-                shadow="xl"
+                shadow="2xl"
               >
                 <Avatar
-                  shadow="xl"
+                  shadow="2xl"
                   src={img}
                   w="10rem"
                   h="10rem"

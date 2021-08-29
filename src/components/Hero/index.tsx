@@ -30,7 +30,7 @@ export const Hero = () => {
             bgColor="green.500"
             mt={4}
             color="gray.50"
-            shadow="xl"
+            shadow="2xl"
             rightIcon={<BiDonateHeart />}
             _focus={{ shadow: "none" }}
             _hover={{ bgColor: "green.400" }}

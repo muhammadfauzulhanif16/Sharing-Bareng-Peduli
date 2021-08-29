@@ -75,7 +75,7 @@ export const Header = () => {
           <HStack d={{ base: "none", lg: "inline-flex" }}>
             <Button
               bgColor="green.500"
-              shadow="xl"
+              shadow="2xl"
               color="gray.50"
               _focus={{ border: "none" }}
               _hover={{ bgColor: "green.400" }}
@@ -113,7 +113,7 @@ export const Header = () => {
               p={4}
               m={2}
               rounded={16}
-              shadow="xl"
+              shadow="2xl"
             >
               <HStack justify="space-between" w="full">
                 <Link to="/">
