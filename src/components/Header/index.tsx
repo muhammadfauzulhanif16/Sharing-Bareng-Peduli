@@ -86,6 +86,8 @@ export const Header = () => {
           </HStack>
 
           <Box display={{ base: "inline-flex", lg: "none" }}>
+            <ColorModeSwitcher mr={4} _focus={{ border: "none" }} />
+
             <IconButton
               display={{ base: "flex", lg: "none" }}
               aria-label="Open menu"
@@ -94,6 +96,7 @@ export const Header = () => {
               variant="ghost"
               icon={<AiOutlineMenu />}
               onClick={mobileNav.onOpen}
+              _focus={{ border: "none" }}
             />
 
             <VStack
@@ -130,6 +133,7 @@ export const Header = () => {
 
               <Button
                 bgColor="green.500"
+                color="gray.50"
                 w="full"
                 _focus={{ border: "none" }}
                 rightIcon={<BiDonateHeart />}
