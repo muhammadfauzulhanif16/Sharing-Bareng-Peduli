@@ -3,6 +3,7 @@ import * as serviceWorker from "./serviceWorker";
 import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom";
 import * as React from "react";
+import "./assets/style.css";
 
 import { Routes } from "./routes";
 

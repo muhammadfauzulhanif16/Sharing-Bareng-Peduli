@@ -28,12 +28,14 @@ export const Header = () => {
 
   return (
     <Box
+      as="nav"
       pos="sticky"
       top="0"
       zIndex={1}
       bgColor={t1}
       borderBottomRadius={16}
       shadow="md"
+      id="home"
     >
       <Box mx={[2, 4, 8]} py={4}>
         <Flex align="center" justify="space-between">
