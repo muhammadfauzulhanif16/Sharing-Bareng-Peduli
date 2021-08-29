@@ -41,7 +41,7 @@ export const Hero = () => {
             size="lg"
             mt={4}
             ml="1.5rem"
-            bgColor="green.500"
+            colorScheme="green"
             variant="outline"
             _focus={{ shadow: "none" }}
           >
