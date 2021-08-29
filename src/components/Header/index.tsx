@@ -34,8 +34,7 @@ export const Header = () => {
       zIndex={1}
       bgColor={t1}
       borderBottomRadius={16}
-      shadow="md"
-      id="home"
+      shadow="lg"
     >
       <Box mx={[2, 4, 8]} py={4}>
         <Flex align="center" justify="space-between">
@@ -79,6 +78,7 @@ export const Header = () => {
               shadow="xl"
               color="gray.50"
               _focus={{ border: "none" }}
+              _hover={{ bgColor: "green.400" }}
               rightIcon={<BiDonateHeart />}
             >
               Donate
@@ -137,6 +137,7 @@ export const Header = () => {
                 bgColor="green.500"
                 color="gray.50"
                 w="full"
+                _hover={{ bgColor: "green.400" }}
                 _focus={{ border: "none" }}
                 rightIcon={<BiDonateHeart />}
               >

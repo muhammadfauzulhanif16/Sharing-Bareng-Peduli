@@ -33,6 +33,7 @@ export const Hero = () => {
             shadow="xl"
             rightIcon={<BiDonateHeart />}
             _focus={{ shadow: "none" }}
+            _hover={{ bgColor: "green.400" }}
           >
             Donate
           </Button>
