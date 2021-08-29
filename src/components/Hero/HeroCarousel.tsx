@@ -29,14 +29,8 @@ export const HeroCarousel = () => {
   });
 
   return (
-    <Flex
-      w="full"
-      pos="relative"
-      overflow="hidden"
-      borderRadius={16}
-      shadow="xl"
-    >
-      <Flex h="80vh" w="full" {...carouselStyle}>
+    <Flex pos="relative" overflow="hidden" borderRadius={16} shadow="xl">
+      <Flex h="100%" w="full" {...carouselStyle}>
         {carousel.map(({ img }, sid) => (
           <Box key={`slide-${sid}`} boxSize="full" flex="none">
             <Img src={img} boxSize="full" objectFit="cover" />

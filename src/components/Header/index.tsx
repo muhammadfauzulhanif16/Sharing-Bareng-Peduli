@@ -15,11 +15,10 @@ import {
   Tab,
   TabList,
 } from "@chakra-ui/react";
-import { AiOutlineMenu } from "react-icons/ai";
 import SBPLogo from "../../images/logo/ShaBarLogo.png";
 import { Link } from "react-router-dom";
 import { NavList as nav } from "./NavList";
-import { BiDonateHeart } from "react-icons/all";
+import { BiDonateHeart, AiOutlineMenu } from "react-icons/all";
 
 export const Header = () => {
   const mobileNav = useDisclosure();
@@ -33,7 +32,7 @@ export const Header = () => {
       borderBottomRadius={16}
       shadow="sm"
     >
-      <Box mx={8} py={4}>
+      <Box mx={[2, 4, 8]} py={4}>
         <Flex align="center" justify="space-between">
           <Link to="/">
             <HStack>
@@ -110,13 +109,6 @@ export const Header = () => {
                 onClick={mobileNav.onClose}
               />
 
-              {nav.map(({ name, to }) => {
-                return (
-                  <Button w="full" variant="ghost">
-                    <Link to={to}>{name}</Link>
-                  </Button>
-                );
-              })}
               <Button
                 colorScheme="green"
                 w="full"

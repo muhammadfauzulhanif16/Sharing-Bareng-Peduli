@@ -1,6 +1,6 @@
 import {
   Box,
-  Flex,
+  SimpleGrid,
   Heading,
   Text,
   HStack,
@@ -21,7 +21,7 @@ export const About = () => {
         “Berbagi Bersama Menebar Kebaikan”
       </Heading>
 
-      <Text mx={48} mb={8} color="gray.500">
+      <Text w={["full", "full", "full", "50rem"]} mb={8} color="gray.500">
         Komunitas yang disusun oleh kelompok anak muda yang memiliki empati
         dengan tujuan untuk selalu berusaha menebar kebaikan dalam kehidupan
         sosial di masyarakat.
@@ -31,7 +31,7 @@ export const About = () => {
         meringankan masyarakat yang kurang mampu.
       </Text>
 
-      <Flex mx={16}>
+      <SimpleGrid columns={[1, 1, 2, 2]} spacing={4}>
         <Box w="full" align="start" fontWeight="500" fontSize="lg">
           <Text>Visi</Text>
 
@@ -71,7 +71,7 @@ export const About = () => {
             ))}
           </VStack>
         </Box>
-      </Flex>
+      </SimpleGrid>
     </Box>
   );
 };

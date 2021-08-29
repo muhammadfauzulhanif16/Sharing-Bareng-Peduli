@@ -20,18 +20,18 @@ export const Payment = () => {
         Lorem ipsum dolor.
       </Heading>
 
-      <Text mx={48} mb={8} color="gray.500">
+      <Text w={["full", "full", "full", "50rem"]} mb={8} color="gray.500">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
         consequatur dolorum eaque quia sed veritatis? Aut, eaque ut. Nam nihil
         quod voluptate. Accusamus asperiores est id molestias perferendis
         sapiente, ut.
       </Text>
 
-      <SimpleGrid columns={[1, 7]}>
-        {payment.map(({ name, img }) => {
+      <SimpleGrid columns={[2, 2, 2, 7]} spacing={8}>
+        {payment.map(({ name, img, w }) => {
           return (
             <Center>
-              <Image alt={`${name}'s icon`} src={img} title={name} w="7rem" />
+              <Image alt={`${name}'s icon`} src={img} title={name} w={w} />
             </Center>
           );
         })}

@@ -37,7 +37,7 @@ export const Member = () => {
   });
 
   return (
-    <Box py={12} px={8} align="center">
+    <Box py={12} align="center">
       <Text fontSize="xl" fontWeight="500" color="green.500" mb={4}>
         ANGGOTA
       </Text>
@@ -46,7 +46,12 @@ export const Member = () => {
         Lorem ipsum dolor.
       </Heading>
 
-      <Text mx={48} mb={8} color="gray.500">
+      <Text
+        w={["full", "full", "full", "50rem"]}
+        px={8}
+        mb={8}
+        color="gray.500"
+      >
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
         consequatur dolorum eaque quia sed veritatis? Aut, eaque ut. Nam nihil
         quod voluptate. Accusamus asperiores est id molestias perferendis
@@ -61,7 +66,7 @@ export const Member = () => {
                 mb={8}
                 bgColor="gray.100"
                 p={8}
-                w="25rem"
+                w={["80%", "25rem"]}
                 borderRadius={16}
                 shadow="xl"
               >

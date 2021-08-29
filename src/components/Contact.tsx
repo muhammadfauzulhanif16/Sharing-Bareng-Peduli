@@ -7,14 +7,15 @@ import {
   Icon,
   Text,
   Flex,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { BiMailSend, BiPhone, BiMap } from "react-icons/all";
 
 export const Contact = () => {
   return (
-    <Flex py={12} px={8}>
-      <Box w="full">
-        <Box mb={8}>
+    <Flex py={12} px={8} direction={["column", "column", "row"]}>
+      <SimpleGrid w="full" columns={[1, 2, 1]} mb={[4]} spacing={4}>
+        <Box>
           <Heading align="start" size="lg">
             Kontak
           </Heading>
@@ -54,7 +55,7 @@ export const Contact = () => {
             <Text fontWeight={600}>Lorem ipsum dolor sit amet.</Text>
           </HStack>
         </Box>
-      </Box>
+      </SimpleGrid>
 
       <AspectRatio ratio={16 / 9} w="full">
         <Box

@@ -64,7 +64,7 @@ export const MemberList = [
   {
     name: "Fandhy Ardhana Saputra",
     img: `${FAS}`,
-    role: "Visuals & Video Editor",
+    role: "Visuals & Video Editor, Event Organizer",
     quote: "",
   },
   {

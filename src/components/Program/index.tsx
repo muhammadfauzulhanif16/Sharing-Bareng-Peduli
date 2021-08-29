@@ -20,18 +20,23 @@ export const Program = () => {
         Lorem ipsum dolor.
       </Heading>
 
-      <Text mx={48} mb={8} color="gray.500">
+      <Text w={["full", "full", "full", "50rem"]} mb={8} color="gray.500">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
         consequatur dolorum eaque quia sed veritatis? Aut, eaque ut. Nam nihil
         quod voluptate. Accusamus asperiores est id molestias perferendis
         sapiente, ut.
       </Text>
 
-      <SimpleGrid columns={[1, 2]}>
+      <SimpleGrid columns={2}>
         {program.map(({ name, img }) => {
           return (
             <Center>
-              <Image alt={`${name}'s icon`} src={img} title={name} h="10rem" />
+              <Image
+                alt={`${name}'s icon`}
+                src={img}
+                title={name}
+                h={["7rem", "10rem"]}
+              />
             </Center>
           );
         })}
